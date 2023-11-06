@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return 'You could put any content here you like, perhaps even a homepage for your bot!'
+    return 'Hi! This is the RIDEmory GroupME Bot'
 
 
 @app.route('/', methods=['POST'])
