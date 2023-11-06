@@ -21,12 +21,12 @@ def home():
 @app.route('/', methods=['POST'])
 def receive():
     print('Incoming message:')
-   # print(data)
+    print(data)
 
     # Prevent self-reply
-   # if data['sender_type'] != 'bot':
-     #   if data['text'].startswith('/ping'):
-      #      send(data['name'] + ' pinged me!')
+    if data['sender_type'] != 'bot':
+        if data['text'].startswith('/ping'):
+            send(data['name'] + ' pinged me!')
 
     return 'ok', 200
 
